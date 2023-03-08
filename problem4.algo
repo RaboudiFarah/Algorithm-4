@@ -1,0 +1,20 @@
+PROCEDURE is_plindrome (left,right:INTEGER, word:STRING[50])
+
+BEGIN
+//Stop compare : an empty word or a word containing a single charactor is pa lindrome.
+    IF (word.length =0 OR left =right ) THEN
+        write ( "it's palindrome")
+        
+    ELSE
+     // we compare the first and last charactors 
+     // if equality we test the rest of the word
+        IF (word [left] =word [right]) THEN
+           isPalindrome (left+1, right-1 , word )
+  
+    ELSE
+             write ("it's not palindrome ")
+            
+          END_IF
+        END_IF
+
+END
